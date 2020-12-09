@@ -1,0 +1,1 @@
+add_library(UnitTest base64_tests.cpp enc_dec_tests.cpp file_split_merge_tests.cpp horcrux_unit_test_main.cpp)
