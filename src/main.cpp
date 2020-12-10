@@ -11,14 +11,18 @@ int main(int argc, char* argv[]) {
               << std::endl;
     exit(EXIT_FAILURE);
   }
-
+  byte iv[]  =
+  {   0x00, 0x01, 0x02, 0x03,
+       0x04, 0x05, 0x06, 0x07,
+       0x08, 0x09, 0x0a, 0x0b,
+       0x0c, 0x0d, 0x0e, 0x0f };
   // Load the necessary cipher
   EVP_add_cipher(EVP_aes_256_cbc());
   encryptDecrypt encrpt_decrypt;
   secure_string ctext, rtext;
 
-  byte key[KEY_SIZE], iv[BLOCK_SIZE];
-  encrpt_decrypt.gen_params(key, iv);
+  byte key[KEY_SIZE];
+  encrpt_decrypt.gen_params(key);
   std::string encrpt_decrypt_argument1 = std::string(argv[1]);
   std::string encrpt_decrypt_argument2 = std::string(argv[2]);
   std::string input_path = std::string(argv[4]);

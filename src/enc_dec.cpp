@@ -4,12 +4,10 @@
 #include "enc_dec.h"
 #include "customexceptions.h"
 
-void encryptDecrypt::gen_params(byte key[KEY_SIZE], byte iv[BLOCK_SIZE]) {
+void encryptDecrypt::gen_params(byte key[KEY_SIZE]) {
   int rc = RAND_bytes(key, KEY_SIZE);
   if (rc != 1) throw random_generation_error("RAND_bytes key failed");
 
-  rc = RAND_bytes(iv, BLOCK_SIZE);
-  if (rc != 1) throw random_generation_error("RAND_bytes for iv failed");
 }
 
 void encryptDecrypt::aes_encrypt(

@@ -42,7 +42,7 @@ void fileSplitMerge::merge(std::string& filesPath,
   for (const auto& file : fs::directory_iterator(encrypted_files_path)) {
     files_to_merge.insert((fs::path)file);
   }
-  std::ofstream ofile(outPutFilePath, std::ios::out | std::ios::app | std::ios::binary);
+  std::ofstream ofile(outPutFilePath, std::ios::out | std::ios::binary);
   for (auto& file : files_to_merge) {
     std::ifstream ifile(file, std::ios::in | std::ios::binary);
     if (!ifile.is_open())
