@@ -1,6 +1,6 @@
 #include <fstream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <set>
 
 #include "file_split_merge.h"

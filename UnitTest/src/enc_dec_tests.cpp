@@ -1,4 +1,5 @@
 #include <string>
+
 #include "enc_dec_tests.h"
 
 void encryptDecrypt_Tests::SetUp() { encrypt_decrypt = new encryptDecrypt(); }
