@@ -37,20 +37,23 @@ void fileSplitMerge::merge(std::string& filesPath,
                            std::string& outPutFilePath) {
   namespace fs = std::filesystem;
   std::set<fs::path> files_to_merge;
-  std::ofstream merged_file;
+
   fs::path encrypted_files_path = fs::path(filesPath);
   for (const auto& file : fs::directory_iterator(encrypted_files_path)) {
     files_to_merge.insert((fs::path)file);
   }
   std::ofstream ofile(outPutFilePath, std::ios::out | std::ios::binary|std::ios::app);
+  std::string str;
+  ofile.unsetf(std::ios_base::skipws);
   for (auto& file : files_to_merge) {
     std::ifstream ifile(file, std::ios::in | std::ios::binary);
-    if (!ifile.is_open())
+    if (!ifile.is_open()||!ofile.is_open())
     {
-      throw invalid_file("could not read file: ");
+      throw invalid_file("File opening error: ");
       break;
     }
-    ofile << ifile.rdbuf();
+    std::getline (ifile,str);
+    ofile<<str;
     std::remove(std::string(file).c_str());
   }
 

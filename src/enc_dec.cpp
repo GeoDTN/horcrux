@@ -14,7 +14,7 @@ void encryptDecrypt::aes_encrypt(
     const byte key[KEY_SIZE], const byte iv[BLOCK_SIZE],
     secure_string& ctext, size_t horcrux_count,
     std::string& inputPath, std::string& outPutPath) {
-    std::string encrypted_file = "encrypted";
+    std::string encrypted_file = "encrypted.txt";
   const secure_string ptext = pathStringHandler::filePathToString(inputPath);
   std::cout << "Plain  text from file is :" << ptext << std::endl;
   EVP_CIPHER_CTX_free_ptr ctx(EVP_CIPHER_CTX_new(), ::EVP_CIPHER_CTX_free);
