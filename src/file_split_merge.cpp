@@ -11,7 +11,7 @@ void fileSplitMerge::split(size_t splitNumber,std::string& inputfilePath, std::s
   namespace fs = std::filesystem;
   secure_string file_to_string = pathStringHandler::filePathToString(inputfilePath);
   size_t buffer_size = file_to_string.length() / splitNumber;
-  std::ifstream ifs(inputfilePath, std::ios::in | std::ios::binary);  // split
+  std::ifstream ifs(inputfilePath, std::ios::in | std::ios::binary);
 
   char buf[buffer_size];
   size_t file_number = 0;
