@@ -49,6 +49,7 @@ void encryptDecrypt::aes_decrypt(
   const secure_string& ctext =
       pathStringHandler::filePathToString(outputFilePath);
   std::cout <<"Cipher text from file is :"<<ctext<<std::endl;
+
   EVP_CIPHER_CTX_free_ptr ctx(EVP_CIPHER_CTX_new(), ::EVP_CIPHER_CTX_free);
   int rc = EVP_DecryptInit_ex(ctx.get(), EVP_aes_256_cbc(), NULL, key, iv);
   if (rc != 1) throw decryption_error("EVP_DecryptInit_ex failed");
