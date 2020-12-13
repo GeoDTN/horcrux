@@ -6,11 +6,25 @@
 #include "customexceptions.h"
 
 int main(int argc, char* argv[]) {
+
   if (argc < 5) {
     std::cerr << "Inavlid command line arguments. Please use correct arguments"
               << std::endl;
     exit(EXIT_FAILURE);
   }
+  std::filesystem::path input{argv[3]};
+  std::filesystem::path output{argv[4]};
+
+  if(!std::filesystem::exists(input)){
+    std::cerr << "Input path does not exist"<< std::endl;
+    exit(EXIT_FAILURE);
+  }
+
+  if(!std::filesystem::exists(output)){
+    std::cerr << "Output path does not exist"<< std::endl;
+    exit(EXIT_FAILURE);
+  }
+
   byte iv[]  =
   {   0x00, 0x01, 0x02, 0x03,
        0x04, 0x05, 0x06, 0x07,
