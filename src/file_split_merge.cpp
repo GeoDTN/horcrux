@@ -28,7 +28,7 @@ void fileSplitMerge::split(size_t splitNumber,std::string& inputfilePath, std::s
       std::ofstream(split_component)<< chunk << '\n';
     }
     fs::copy(fs::path(split_component),fs::path(outputPath),fs::copy_options::overwrite_existing);
-    std::remove(split_component.c_str());
+    std::filesystem::remove(split_component);
 
   }
 }
@@ -54,7 +54,7 @@ void fileSplitMerge::merge(std::string& filesPath,
     }
     std::getline (ifile,str);
     ofile<<str;
-    std::remove(std::string(file).c_str());
+    std::filesystem::remove(std::string(file));
   }
 
 }

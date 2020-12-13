@@ -38,7 +38,7 @@ void encryptDecrypt::aes_encrypt(
     ctext.resize(out_len1 + out_len2);
     std::ofstream(encrypted_file) << ctext << '\n';
     fileSplitMerge::split(horcrux_count, encrypted_file, outPutPath);
-    std::remove(encrypted_file.c_str());
+    std::filesystem::remove(encrypted_file);
     std::filesystem::remove(inputPath);
 
 }
