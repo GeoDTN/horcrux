@@ -39,7 +39,7 @@ void fileSplitMerge::merge(std::string& filesPath,
   std::set<fs::path> files_to_merge;
 
   fs::path encrypted_files_path = fs::path(filesPath);
-  for (const auto& file : fs::directory_iterator(encrypted_files_path)) {
+  for (const auto& file : fs::directory_iterator{encrypted_files_path}) {
     files_to_merge.insert((fs::path)file);
   }
   std::ofstream ofile(outPutFilePath, std::ios::out | std::ios::binary|std::ios::app);
