@@ -1,5 +1,6 @@
 This C++17 code will achieve the ff requirements
 save a file with the following steps:
+
 – The user selects a file from his/her filesystem
 – The user specifies the number of horcrux he/she wants to create
 – The application encrypts the file with a randomly generated key
@@ -19,7 +20,9 @@ process above
 user
 
 The CLI should expose the following commands
-user@hostname:~$ horcrux create -n <horcrux count> <input
+
+1. user@hostname:~$ horcrux create -n <horcrux count> <input
 path> <output path>
+  
 2. user@hostname:~$ horcrux load -k <decryption key> <input
 files> <output_file>
