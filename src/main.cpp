@@ -60,22 +60,12 @@ int main(int argc, char* argv[]) {
       exit(EXIT_FAILURE);
     }
 
-  }  catch (const invalid_file& e) {
-    std::cout<<e.what ()<<std::endl;
-  }catch (const random_generation_error& e) {
-    std::cout<<e.what ()<<std::endl;
-  }catch (const encryption_error& e) {
-    std::cout<<e.what ()<<std::endl;
-  }catch (const decryption_error& e) {
-    std::cout<<e.what ()<<std::endl;
-  }catch (const base64_encode_error& e) {
-    std::cout<<e.what ()<<std::endl;
-  }
-  catch (const base64_decode_error& e) {
-    std::cout<<e.what ()<<std::endl;
   }
   catch (const std::exception& e) {
     std::cout<<"Unexpected exception:"<<e.what ()<<"thrown"<<std::endl;
+  }
+  catch (...) {
+    std::cout<<"Unexpected exception:thrown"<<std::endl;
   }
 
   OPENSSL_cleanse(key, KEY_SIZE);
