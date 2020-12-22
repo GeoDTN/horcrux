@@ -21,8 +21,13 @@ user
 
 The CLI should expose the following commands
 
-1. user@hostname:~$ horcrux create -n <horcrux count> <input
-path> <output path>
+1. user@hostname:~$ horcrux create -n <horcrux count> <inputpath> <output path>
   
-2. user@hostname:~$ horcrux load -k <decryption key> <input
-files> <output_file>
+2. user@hostname:~$ horcrux load -k <decryption key> <inputfiles> <output_file>
+
+           Building the code
+To build and test this repo on ubuntu or similar destro, after installing all necessary libraries and setting up environment:
+1. git clone git@github.com:GeoDTN/horcrux.git
+2. cd horcrux &&  mkdir  build  &&  cd build  &&  cmake ..  &&  make
+3. The app program executable is horcrux and unit test executable is  UnitTest/test_horcrux
+4. Note unit tests do not cover all test cases. And for  both app test and unit test, create and configure necessary files and directories.

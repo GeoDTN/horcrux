@@ -62,10 +62,10 @@ int main(int argc, char* argv[]) {
 
   }
   catch (const std::exception& e) {
-    std::cout<<"Unexpected exception:"<<e.what ()<<"thrown"<<std::endl;
+    std::cout<<"Exception:"<<e.what ()<<"thrown"<<std::endl;
   }
   catch (...) {
-    std::cout<<"Unexpected exception:thrown"<<std::endl;
+    std::cout<<"Unexpected exception thrown"<<std::endl;
   }
 
   OPENSSL_cleanse(key, KEY_SIZE);
