@@ -12,13 +12,13 @@ by the user
 > The application shows the key used for encryption in base64 format
 ```
 ## Load a file with the following steps:
-> The user selects the horcruxes he/she created before
-> The user inserts the encryption key he/she got during the saving
+> The user selects the horcruxes he/she created before\
+> The user inserts the encryption key he/she got during the saving\
 process above
-> The application reads the horcruxes from the disk
-> The application joins the encrypted buffers
-> The application decrypts the joined buffer with the provided key
-> The application saves back the plain file in a folder specified by the
+> The application reads the horcruxes from the disk\
+> The application joins the encrypted buffers\
+> The application decrypts the joined buffer with the provided key\
+> The application saves back the plain file in a folder specified by the\
 user
 
 ##The CLI should expose the following commands:\
