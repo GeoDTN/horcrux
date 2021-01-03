@@ -30,8 +30,8 @@ user
 ```  user@hostname:~$ horcrux load -k <decryption key> <inputfiles> <output_file>```
 
           
-To build and test this repo on ubuntu or similar distro, after installing all necessary libraries and setting up environment:
-``` git clone git@github.com:GeoDTN/horcrux.git```
+To build and test this repo on ubuntu or similar distro, after installing all necessary libraries and setting up environment:\
+``` git clone git@github.com:GeoDTN/horcrux.git```\
  ``` cd horcrux &&  mkdir  build  &&  cd build  &&  cmake ..  &&  make```
 #### The app program executable is horcrux and unit test executable is  UnitTest/test_horcrux
 ### Note unit tests do not cover all test cases. And for  both app test and unit test, create and configure necessary files and directories.
