@@ -21,8 +21,8 @@ process above
 > The application saves back the plain file in a folder specified by the
 user
 
-#The CLI should expose the following commands\
-               ## 1.To encrypt and save\
+##The CLI should expose the following commands\
+                1.To encrypt and save
 
 ``` user@hostname:~$ horcrux create -n <horcrux count> <inputpath> <output path> ```\
                 ##2.To load, decrypt and retrieve
