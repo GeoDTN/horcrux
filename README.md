@@ -1,5 +1,6 @@
 #This C++17 code will achieve the following requirements.
-##save a file with the following steps:
+
+##Save a file with the following steps:
 ```
 > The user selects a file from his/her filesystem
 > The user specifies the number of horcrux he/she wants to create
@@ -10,7 +11,7 @@ number of horcrux specified by the user
 by the user
 > The application shows the key used for encryption in base64 format
 ```
-## load a file with the following steps:
+## Load a file with the following steps:
 > The user selects the horcruxes he/she created before
 > The user inserts the encryption key he/she got during the saving
 process above
@@ -20,13 +21,13 @@ process above
 > The application saves back the plain file in a folder specified by the
 user
 
-#The CLI should expose the following commands
+#The CLI should expose the following commands\
                ## 1.To encrypt and save
 
-###``` user@hostname:~$ horcrux create -n <horcrux count> <inputpath> <output path> ```
+``` user@hostname:~$ horcrux create -n <horcrux count> <inputpath> <output path> ```
                 ##2.To load, decrypt and retrieve
   
-###```  user@hostname:~$ horcrux load -k <decryption key> <inputfiles> <output_file>```
+```  user@hostname:~$ horcrux load -k <decryption key> <inputfiles> <output_file>```
 
            Building the code
 To build and test this repo on ubuntu or similar distro, after installing all necessary libraries and setting up environment:
