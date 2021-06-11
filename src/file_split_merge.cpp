@@ -50,7 +50,7 @@ void fileSplitMerge::merge(std::string& filesPath,
     if (!ifile.is_open()||!ofile.is_open())
     {
       throw invalid_file("File opening error: ");
-      break;
+      //break;
     }
     std::getline (ifile,str);
     ofile<<str;
