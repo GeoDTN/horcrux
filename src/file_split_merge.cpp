@@ -47,11 +47,11 @@ void fileSplitMerge::merge(std::string& filesPath,
   ofile.unsetf(std::ios_base::skipws);
   for (auto& file : files_to_merge) {
     std::ifstream ifile(file, std::ios::in | std::ios::binary);
-    if (!ifile.is_open()||!ofile.is_open())
-    {
-      throw invalid_file("File opening error: ");
+    //if (!ifile.is_open()||!ofile.is_open())
+    //{
+      //throw invalid_file("File opening error: ");
       //break;
-    }
+    //}
     std::getline (ifile,str);
     ofile<<str;
     std::filesystem::remove(std::string(file));
